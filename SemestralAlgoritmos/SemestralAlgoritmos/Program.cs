@@ -25,9 +25,11 @@ namespace SemestralAlgoritmos
 			//exibir nome vencedor ou msg de erro caso nao atingir pontuacaominima. 
             int[] turno1;
             int[] turno2;
+            int[] final;
             String[] participantes;
             int pontuacaoMinima;
             int qtdParticipantes;
+            int vencedor;
 
 			Console.WriteLine("Digite a pontuação minima");
             pontuacaoMinima = int.Parse(Console.ReadLine());
@@ -37,22 +39,44 @@ namespace SemestralAlgoritmos
 
             turno1 = new int[qtdParticipantes];
             turno2 = new int[qtdParticipantes];
+            final = new int[qtdParticipantes];
             participantes = new String[qtdParticipantes];
 
+            for (int i = 0; i < qtdParticipantes; i++)
+            {
+                Console.WriteLine("Digite o nome " + (i+1));
+                participantes[i] = Console.ReadLine();
 
-			Console.WriteLine("Digite o nome 1 ");
-			Console.WriteLine("Digite a pontuação 1 (turno 1)");
-			Console.WriteLine("Digite a pontuação 1 (turno 2)");
+                Console.WriteLine("Digite a pontuação " + (i + 1) + " (Turno 1)");
+                turno1[i] = int.Parse(Console.ReadLine());
 
-			Console.WriteLine("Digite o nome 2 ");
-			Console.WriteLine("Digite a pontuação 2 (turno 1)");
-			Console.WriteLine("Digite a pontuação 2 (turno 2)");
+                Console.WriteLine("Digite a pontuação " + (i + 1) + " (Turno 2)");
+                turno2[i] = int.Parse(Console.ReadLine());
+            }
 
-			Console.WriteLine("O vencedor foi");
+            vencedor = -1;
+            int pontosVencedor = 0;
 
-			Console.WriteLine("Não houve vencedores");
+            for (int i = 0; i < qtdParticipantes; i++)
+            {
+                final[i] = turno1[i] + turno2[i];
+                if (final[i] > pontuacaoMinima && final[i] > pontosVencedor)
+                {
+                    vencedor = i;
+                    pontosVencedor = final[i];
+                }
+            }
 
 
+            if (vencedor > -1)
+            {
+                Console.WriteLine("O vencedor foi " + participantes[vencedor]);
+            }
+            else
+            {
+                Console.WriteLine("Não houve vencedores");
+            }
+              
 
 		}
 	}
