@@ -11,7 +11,7 @@ namespace SemestralAlgoritmos
 		static void Main(string[] args)
 		{
 
-
+			//
 			//competição com apuração de pontos
 			//
 			//competição divida em 2 turnos com pontuacao minima
