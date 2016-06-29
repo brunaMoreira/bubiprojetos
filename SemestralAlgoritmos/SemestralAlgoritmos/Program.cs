@@ -13,7 +13,7 @@ namespace SemestralAlgoritmos
 
 
 			//competição com apuração de pontos
-
+			//
 			//competição divida em 2 turnos com pontuacao minima
 
 			//SE competidor (x) fizer MAIS pontos (pontuaçãofinal) nao atingir a pontuacao minima ENTAO nao há vencedores. 
