@@ -76,7 +76,7 @@ namespace SemestralAlgoritmos
             {
                 Console.WriteLine("Não houve vencedores");
             }
-              
+            Console.ReadKey();
 
 		}
 	}
