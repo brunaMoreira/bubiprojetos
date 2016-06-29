@@ -23,12 +23,22 @@ namespace SemestralAlgoritmos
 			//programa deve pedir que o usuario fornecça a pontuacaminima e qtdparticipantes, os nomes e as pontuações (dos 2 turnos)
 
 			//exibir nome vencedor ou msg de erro caso nao atingir pontuacaominima. 
-
-
+            int[] turno1;
+            int[] turno2;
+            String[] participantes;
+            int pontuacaoMinima;
+            int qtdParticipantes;
 
 			Console.WriteLine("Digite a pontuação minima");
-			string qtdpontuacao
+            pontuacaoMinima = int.Parse(Console.ReadLine());
+
 			Console.WriteLine("Digite a quantidade de participantes");
+            qtdParticipantes = int.Parse(Console.ReadLine());
+
+            turno1 = new int[qtdParticipantes];
+            turno2 = new int[qtdParticipantes];
+            participantes = new String[qtdParticipantes];
+
 
 			Console.WriteLine("Digite o nome 1 ");
 			Console.WriteLine("Digite a pontuação 1 (turno 1)");
